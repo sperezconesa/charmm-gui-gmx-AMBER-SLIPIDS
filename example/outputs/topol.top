@@ -1,0 +1,60 @@
+;
+;	File 'topol.top' was generated
+;	By user: sperez (501)
+;	On host: BB-8.lan
+;	At date: Wed May 12 18:26:26 2021
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                     :-) GROMACS - gmx pdb2gmx, 2020 (-:
+;
+;	Executable:   /Users/sperez/bin/gromacs-2020/gmx_api/bin/gmx
+;	Data prefix:  /Users/sperez/bin/gromacs-2020/gmx_api
+;	Working dir:  /Users/sperez/Projects/miniprojects/charmm-gui-gmx-AMBER-SLIPIDS/example
+;	Command line:
+;	  gmx pdb2gmx -f protein.pdb
+;	Force field data was read from:
+;	/Users/sperez/Projects/miniprojects/charmm-gui-gmx-AMBER-SLIPIDS/
+;
+;	Note:
+;	This might be a non-standard force field location. When you use this topology, the
+;	force field must either be present in the current directory, or the location
+;	specified in the GMXLIB path variable or with the 'include' mdp file option.
+;
+
+; Include forcefield parameters
+#include "amber14sb_slipids18.ff/forcefield.itp"
+
+; Include chain topologies
+#include "topol_Protein_chain_A.itp"
+
+; Include water topology
+#include "amber14sb_slipids18.ff/tip3p.itp"
+#include "amber14sb_slipids18.ff/DOPE.itp"
+#include "amber14sb_slipids18.ff/DOPG.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "amber14sb_slipids18.ff/ions.itp"
+
+[ system ]
+; Name
+Protein
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_A     4
+POT   	           6
+DOPG  	          39
+DOPE  	         106
+POT   	          12
+SOD   	          19
+CLA   	          22
+TIP3  	       12949
