@@ -1,14 +1,11 @@
 AMBER14SB_parmbsc1_Slipids
 
-********************************************************************
-* Amber99sb-ildn is an improvement to Amber99SB by                 *
-* Kresten Lindorff-Larsen and coworkers at D.E. Shaw Research, inc.*
-* The primary publication (please cite it) is                      *
-* Lindorff-Larsen, K., Piana, S., Palmo, K., Maragakis, P.,        *
-* Klepeis, J.L., Dror, R.O., Shaw, D.E.,                           *
-* Improved side-chain torsion potentials for the Amber ff99SB      *
-* protein force field, Proteins 78:1950–1958 (2010)                *
-********************************************************************
+Maier, J. A., Martinez, C., Kasavajhala, K., Wickstrom, L., Hauser, K. E., & Simmerling, C. (2015).
+ff14SB: improving the accuracy of protein side chain and backbone parameters from ff99SB.
+Journal of chemical theory and computation, 11(8), 3696-3713.
+
+Ivani, I., Dans, P. D., Noy, A., Pérez, A., Faustino, I., Hospital, A., ... & Orozco, M. (2016).
+Parmbsc1: a refined force field for DNA simulations. Nature methods, 13(1), 55.
 
 Slipids (2016)
 
